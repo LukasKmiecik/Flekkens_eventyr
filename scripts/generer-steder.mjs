@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const STEDER_DIR = path.join(ROOT, "steder");
 const OUTPUT_DIR = path.join(ROOT, "public", "generert");
-const IMAGE_EXTS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", "jfif"];
+const IMAGE_EXTS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".jfif"];
 
 function parseInformasjon(filePath) {
   const content = fs.readFileSync(filePath, "utf-8");
