@@ -43,4 +43,3 @@ npm run dev
 - **Leaflet** for interaktivt kart
 - **Build-time innholdspipeline** – ingen backend nødvendig
 - **GitHub Actions** for automatisk bygging og publisering
-
