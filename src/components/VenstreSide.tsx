@@ -27,6 +27,8 @@ export default function VenstreSide({ sted }: Props) {
   const valgtBilde =
     sted.bilder.length > 0 ? `${BASE}${sted.bilder[valgtBildeIndex]}` : null;
 
+  const harMorsomFakta = Boolean(sted.morsom_fakta?.trim());
+
   return (
     <div className="book-page flex flex-col h-full p-4 md:p-6 lg:p-8 overflow-hidden">
       <div className="shrink-0">
@@ -71,7 +73,7 @@ export default function VenstreSide({ sted }: Props) {
       </div>
 
       <div className="flex-1 min-h-0 overflow-y-auto pr-1">
-        {sted.beskrivelse ? (
+        {sted.beskrivelse?.trim() ? (
           <p className="font-body text-foreground text-sm md:text-base leading-relaxed mb-3">
             {sted.beskrivelse}
           </p>
@@ -81,7 +83,7 @@ export default function VenstreSide({ sted }: Props) {
           </p>
         )}
 
-        {sted.morsom_fakta && <MorsomFakta tekst={sted.morsom_fakta} />}
+        {harMorsomFakta ? <MorsomFakta tekst={sted.morsom_fakta!.trim()} /> : null}
       </div>
     </div>
   );
