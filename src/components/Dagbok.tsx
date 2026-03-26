@@ -69,7 +69,7 @@ export default function Dagbok() {
       <div className="relative z-10 flex flex-col items-center flex-1 min-h-0 w-full">
         {/* Header */}
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 md:mb-6 text-center shrink-0 drop-shadow-sm">
-          Maskotens reisedagbok
+          Flekkens reisedagbok
         </h1>
 
         {/* Book — fixed height container */}
