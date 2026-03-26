@@ -8,43 +8,31 @@
   :root {
     --background: 39 35% 92%;
     --foreground: 25 30% 20%;
-
     --card: 40 40% 95%;
     --card-foreground: 25 30% 20%;
-
     --popover: 40 40% 95%;
     --popover-foreground: 25 30% 20%;
-
     --primary: 25 55% 35%;
     --primary-foreground: 40 40% 95%;
-
     --secondary: 35 30% 82%;
     --secondary-foreground: 25 30% 20%;
-
     --muted: 35 20% 88%;
     --muted-foreground: 25 15% 45%;
-
     --accent: 15 60% 50%;
     --accent-foreground: 40 40% 95%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 30 20% 78%;
     --input: 30 20% 78%;
     --ring: 25 55% 35%;
-
     --radius: 0.5rem;
-
     --leather: 15 45% 22%;
     --paper: 42 50% 90%;
     --paper-dark: 38 35% 82%;
     --stamp: 0 60% 45%;
     --ink: 220 25% 25%;
-
     --font-display: 'Caveat', cursive;
     --font-body: 'Nunito', sans-serif;
-
     --shadow-book: 0 8px 32px -8px hsl(25 30% 20% / 0.3), 0 2px 8px -2px hsl(25 30% 20% / 0.15);
     --shadow-photo: 2px 3px 8px hsl(25 30% 20% / 0.25);
     --shadow-page: inset 0 0 30px hsl(30 20% 70% / 0.3);
@@ -68,13 +56,13 @@
 
 @layer components {
   .book-page {
-    background-image: url('/images/paper-bg.jpg');
+    background-image: url('/Flekkens_eventyr/images/paper-bg.jpg');
     background-size: cover;
     box-shadow: var(--shadow-page);
   }
 
   .book-cover {
-    background-image: url('/images/leather-bg.jpg');
+    background-image: url('/Flekkens_eventyr/images/leather-bg.jpg');
     background-size: cover;
     box-shadow: var(--shadow-book);
   }
@@ -103,10 +91,12 @@
     border: none;
     cursor: pointer;
   }
+
   .nav-btn:hover {
     background: hsl(var(--accent));
     transform: translateY(-1px);
   }
+
   .nav-btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
@@ -116,6 +106,7 @@
   .tape-decoration {
     position: relative;
   }
+
   .tape-decoration::before {
     content: '';
     position: absolute;
