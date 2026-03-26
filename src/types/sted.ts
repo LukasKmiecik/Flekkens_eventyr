@@ -10,7 +10,7 @@ export interface Sted {
   morsom_fakta: string | null;
   breddegrad: number | null;
   lengdegrad: number | null;
-  rekkefolge: number;
+  rekkefolge: number | null;
   forsidebilde: string | null;
   bilder: string[];
 }
