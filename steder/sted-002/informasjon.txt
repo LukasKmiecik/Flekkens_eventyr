@@ -1,12 +1,10 @@
-id: praha-karlsbroen
-tittel: Praha – Karlsbroen
-land: Tsjekkia
-by: Praha
-sted: Karlsbroen
-dato: 2025-09-15
-beskrivelse: Praha er Tsjekkias hovedstad og en av Europas vakreste byer. Karlsbroen er en historisk steinbro over Moldau-elven, prydet med vakre statuer. Byen kalles «Den gylne stad» på grunn av sine mange spir og kupler.
-morsom_fakta: Karlsbroen ble bygget i 1357 og har 30 vakre statuer langs sidene!
-breddegrad: 50.0865
-lengdegrad: 14.4114
+tittel: Kraków – Slottet
+land: Polen
+by: Kraków
+sted: Wawel
+dato: 2025-09-13
+beskrivelse: Kraków er en av de eldste og mest kjente byene i Polen. Wawel-slottet ligger på en høyde over elven Wisła og er et viktig symbol i polsk historie.
+morsom_fakta: På Wawel finnes det en kjent legende om dragen fra Kraków.
+breddegrad: 50.054
+lengdegrad: 19.936
 rekkefolge: 2
-forsidebilde: 1.jpg
