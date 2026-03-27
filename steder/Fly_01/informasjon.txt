@@ -7,4 +7,4 @@ beskrivelse: Flekken reiste med fly fra Stavanger til Krakow. Han satt ved vindu
 morsom_fakta: Når et fly flyr høyt oppe i himmelen, kan det noen ganger være kaldere enn minus 50 grader utenfor flyet.
 breddegrad: 58.8767
 lengdegrad: 5.6378
-rekkefolge: 1
+rekkefolge: 2
