@@ -37,7 +37,7 @@ export default function VenstreSide({ sted }: Props) {
         </h2>
 
         {(sted.dato || sted.by || sted.land) && (
-          <p className="text-center text-muted-foreground font-body text-sm mb-3">
+          <p className="text-center text-muted-foreground font-body text-sm md:text-base mb-4">
             {sted.by ? `${sted.by}` : ""}
             {sted.by && sted.land ? ", " : ""}
             {sted.land ? `${sted.land}` : ""}
@@ -49,21 +49,27 @@ export default function VenstreSide({ sted }: Props) {
 
       <div className="shrink-0">
         {valgtBilde ? (
-          <div className="photo-frame tape-decoration mx-auto mb-3 max-w-xs w-full">
-            <img
-              src={valgtBilde}
-              alt={sted.tittel}
-              className="w-full rounded-sm object-cover aspect-[4/3]"
-            />
+          <div className="photo-frame tape-decoration mx-auto mb-3 w-full max-w-md lg:max-w-lg">
+            <div className="w-full aspect-[4/3] md:aspect-[5/4] rounded-sm overflow-hidden bg-muted/40 flex items-center justify-center">
+              <img
+                src={valgtBilde}
+                alt={sted.tittel}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         ) : (
-          <div className="photo-frame mx-auto mb-3 max-w-xs w-full flex items-center justify-center aspect-[4/3] bg-muted rounded-sm">
-            <span className="text-muted-foreground font-body text-sm">Ingen bilder</span>
+          <div className="photo-frame mx-auto mb-3 w-full max-w-md lg:max-w-lg">
+            <div className="w-full aspect-[4/3] md:aspect-[5/4] rounded-sm bg-muted flex items-center justify-center">
+              <span className="text-muted-foreground font-body text-sm">
+                Ingen bilder
+              </span>
+            </div>
           </div>
         )}
       </div>
 
-      <div className="shrink-0 mb-2">
+      <div className="shrink-0 mb-3">
         <BildeGalleri
           bilder={sted.bilder}
           tittel={sted.tittel}
@@ -83,7 +89,9 @@ export default function VenstreSide({ sted }: Props) {
           </p>
         )}
 
-        {harMorsomFakta ? <MorsomFakta tekst={sted.morsom_fakta!.trim()} /> : null}
+        {harMorsomFakta ? (
+          <MorsomFakta tekst={sted.morsom_fakta!.trim()} />
+        ) : null}
       </div>
     </div>
   );
