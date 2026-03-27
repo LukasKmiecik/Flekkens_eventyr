@@ -7,4 +7,4 @@ beskrivelse: Flekken var i restauranten Smakołyki i Krakow. Der så han en jent
 morsom_fakta: På Smakołyki kan man spise tradisjonell polsk mat, og restauranten ligger veldig nær den gamle bydelen i Krakow. :contentReference[oaicite:1]{index=1}
 breddegrad: 50.0589
 lengdegrad: 19.9328
-rekkefolge:
+rekkefolge: 5
