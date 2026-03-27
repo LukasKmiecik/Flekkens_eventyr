@@ -7,4 +7,4 @@ beskrivelse: Flekken var på Indian Spices i Randaberg. Der fikk han se spennend
 morsom_fakta: På Indian Spices kan man smake mat med krydder fra India. Restauranten ligger i Vistnesveien 5 i Randaberg. :contentReference[oaicite:1]{index=1}
 breddegrad: 59.0017
 lengdegrad: 5.6158
-rekkefolge:
+rekkefolge: 1
