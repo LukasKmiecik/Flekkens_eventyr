@@ -30,14 +30,14 @@ export default function VenstreSide({ sted }: Props) {
   const harMorsomFakta = Boolean(sted.morsom_fakta?.trim());
 
   return (
-    <div className="book-page flex flex-col h-full p-4 md:p-6 lg:p-8 overflow-hidden">
+    <div className="book-page flex flex-col h-full p-4 md:p-5 lg:p-6 overflow-hidden">
       <div className="shrink-0">
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-1 leading-tight">
           {sted.tittel}
         </h2>
 
         {(sted.dato || sted.by || sted.land) && (
-          <p className="text-center text-muted-foreground font-body text-sm md:text-base mb-4">
+          <p className="text-center text-muted-foreground font-body text-sm md:text-base mb-3">
             {sted.by ? `${sted.by}` : ""}
             {sted.by && sted.land ? ", " : ""}
             {sted.land ? `${sted.land}` : ""}
@@ -49,18 +49,18 @@ export default function VenstreSide({ sted }: Props) {
 
       <div className="shrink-0">
         {valgtBilde ? (
-          <div className="photo-frame tape-decoration mx-auto mb-3 w-full max-w-md lg:max-w-lg">
-            <div className="w-full aspect-[4/3] md:aspect-[5/4] rounded-sm overflow-hidden bg-muted/40 flex items-center justify-center">
+          <div className="photo-frame tape-decoration mx-auto mb-3 w-full max-w-md">
+            <div className="w-full h-[220px] md:h-[250px] lg:h-[280px] rounded-sm overflow-hidden bg-muted/20">
               <img
                 src={valgtBilde}
                 alt={sted.tittel}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
         ) : (
-          <div className="photo-frame mx-auto mb-3 w-full max-w-md lg:max-w-lg">
-            <div className="w-full aspect-[4/3] md:aspect-[5/4] rounded-sm bg-muted flex items-center justify-center">
+          <div className="photo-frame mx-auto mb-3 w-full max-w-md">
+            <div className="w-full h-[220px] md:h-[250px] lg:h-[280px] rounded-sm bg-muted flex items-center justify-center">
               <span className="text-muted-foreground font-body text-sm">
                 Ingen bilder
               </span>
