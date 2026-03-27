@@ -11,15 +11,15 @@ export default function BildeGalleri({ bilder, tittel, valgtIndex, onVelg }: Pro
   if (bilder.length <= 1) return null;
 
   return (
-    <div className="flex gap-2 md:gap-3 overflow-x-auto pb-2 justify-center">
+    <div className="flex gap-2 overflow-x-auto pb-2 justify-center">
       {bilder.map((bilde, index) => (
         <button
           key={bilde}
           type="button"
           onClick={() => onVelg(index)}
-          className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-sm overflow-hidden border-2 transition-all ${
+          className={`flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-sm overflow-hidden border-2 transition-all ${
             index === valgtIndex
-              ? "border-accent scale-105 shadow-md"
+              ? "border-accent scale-105 shadow-sm"
               : "border-border opacity-75 hover:opacity-100"
           }`}
           aria-label={`Velg bilde ${index + 1} for ${tittel}`}
