@@ -4,7 +4,7 @@ by: Krakow
 sted: Pijalnia Czekolady E.Wedel, Rynek Główny
 dato: 2026-03-22
 beskrivelse: Wizyta w Pijalni Czekolady E.Wedel na Rynku Głównym w Krakowie. To przytulne miejsce w samym sercu Starego Miasta, znane z gorącej czekolady, deserów i kawy. Na zdjęciu widać menu napojów oraz pluszowe maskotki siedzące przy stoliku, co nadaje scenie ciepły i zabawny charakter.
-morsom_fakta: Pijalnia E.Wedel w Krakowie znajduje się bezpośrednio przy Rynku Głównym 46, czyli w jednej z najbardziej rozpoznawalnych lokalizacji w centrum miasta. Marka Wedel ma tradycję sięgającą 1851 roku. :contentReference[oaicite:1]{index=1}
+morsom_fakta: Pijalnia E.Wedel w Krakowie znajduje się bezpośrednio przy Rynku Głównym 46, czyli w jednej z najbardziej rozpoznawalnych lokalizacji w centrum miasta. Marka Wedel ma tradycję sięgającą 1851 roku. 
 breddegrad: 50.062256
 lengdegrad: 19.938894
-rekkefolge: 1
+rekkefolge: 3
