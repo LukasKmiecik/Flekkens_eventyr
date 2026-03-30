@@ -192,6 +192,7 @@ async function main() {
       breddegrad: parseOptionalNumber(meta.breddegrad),
       lengdegrad: parseOptionalNumber(meta.lengdegrad),
       rekkefolge: parseOptionalNumber(meta.rekkefolge),
+      map_zoom: parseOptionalNumber(meta.map_zoom ?? meta.kart_zoom),
       forsidebilde,
       bilder,
       bildeInnstillinger: buildImageSettings(meta, bilder),
