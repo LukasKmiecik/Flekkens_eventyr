@@ -17,6 +17,7 @@ export interface Sted {
   breddegrad: number | null;
   lengdegrad: number | null;
   rekkefolge: number | null;
+  map_zoom?: number | null;
   forsidebilde: string | null;
   bilder: string[];
   bildeInnstillinger?: Record<string, BildeInnstilling>;
