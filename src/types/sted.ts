@@ -1,3 +1,9 @@
+export interface BildeInnstilling {
+  x: number;
+  y: number;
+  scale: number;
+}
+
 export interface Sted {
   id: string;
   mappe: string;
@@ -13,4 +19,5 @@ export interface Sted {
   rekkefolge: number | null;
   forsidebilde: string | null;
   bilder: string[];
+  bildeInnstillinger?: Record<string, BildeInnstilling>;
 }

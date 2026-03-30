@@ -26,11 +26,12 @@ export default function HoyreSide({ steder, aktivtSted, onVelgSted }: Props) {
     const map = L.map(mapRef.current, {
       zoomControl: true,
       scrollWheelZoom: true,
+      maxZoom: 19,
     });
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "© OpenStreetMap",
-      maxZoom: 18,
+      maxZoom: 19,
     }).addTo(map);
 
     markersLayerRef.current = L.layerGroup().addTo(map);
@@ -124,7 +125,7 @@ export default function HoyreSide({ steder, aktivtSted, onVelgSted }: Props) {
     }
 
     if (aktivtSted.breddegrad != null && aktivtSted.lengdegrad != null) {
-      map.flyTo([aktivtSted.breddegrad, aktivtSted.lengdegrad], 10, {
+      map.flyTo([aktivtSted.breddegrad, aktivtSted.lengdegrad], map.getMaxZoom(), {
         duration: 1.1,
       });
     } else if (stederMedKoord.length > 0) {
@@ -133,24 +134,21 @@ export default function HoyreSide({ steder, aktivtSted, onVelgSted }: Props) {
       );
       map.fitBounds(bounds, { padding: [30, 30] });
     }
-  }, [steder, stederMedKoord, aktivtSted, onVelgSted]);
+  }, [aktivtSted, steder, stederMedKoord, onVelgSted]);
 
   return (
-    <div className="book-page h-full flex flex-col p-3 md:p-4 lg:p-5">
-      <h3 className="font-display text-2xl md:text-3xl text-center text-foreground mb-2">
-        Reiserute
-      </h3>
+    <div className="book-page h-full p-4 md:p-5 lg:p-6 flex flex-col">
+      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-3 leading-tight shrink-0">
+        Reisekart
+      </h2>
 
-      <div
-        ref={mapRef}
-        className="flex-1 rounded-lg overflow-hidden border-2 border-border min-h-[280px] md:min-h-[360px]"
-      />
+      <div className="flex-1 min-h-[320px] rounded-lg overflow-hidden border-2 border-border shadow-md bg-muted/20">
+        <div ref={mapRef} className="w-full h-full" />
+      </div>
 
-      {stederMedKoord.length === 0 && (
-        <p className="text-center text-muted-foreground font-body text-sm mt-2">
-          Ingen steder med koordinater ennå.
-        </p>
-      )}
+      <p className="mt-3 text-center text-sm text-muted-foreground font-body shrink-0">
+        Klikk på en markør for å hoppe til stedet.
+      </p>
     </div>
   );
 }
