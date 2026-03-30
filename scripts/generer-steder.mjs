@@ -111,6 +111,27 @@ function getPrimaryImage(meta, folder, bilder) {
   return bilder[0] || null;
 }
 
+function buildImageSettings(meta, bilder) {
+  const result = {};
+
+  bilder.forEach((bildePath, index) => {
+    const imageNumber = index + 1;
+    const x = parseOptionalNumber(meta[`bilde_${imageNumber}_x`]);
+    const y = parseOptionalNumber(meta[`bilde_${imageNumber}_y`]);
+    const scale = parseOptionalNumber(meta[`bilde_${imageNumber}_scale`]);
+
+    if (x !== null || y !== null || scale !== null) {
+      result[bildePath] = {
+        x: x ?? 50,
+        y: y ?? 50,
+        scale: scale ?? 1,
+      };
+    }
+  });
+
+  return result;
+}
+
 async function main() {
   ensureDir(PUBLIC_DIR);
   ensureDir(OUTPUT_DIR);
@@ -173,6 +194,7 @@ async function main() {
       rekkefolge: parseOptionalNumber(meta.rekkefolge),
       forsidebilde,
       bilder,
+      bildeInnstillinger: buildImageSettings(meta, bilder),
     });
   }
 
